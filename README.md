@@ -4,7 +4,7 @@ Use `git config -e --global` to open `vi` to edit config.
 
 Paste these:
 
-```sh
+```ini
 [alias]
     cleanup = "!git branch --merged | grep -Ev '(^\\*|master|main|dev)' | xargs git branch -d && echo 'Merged Branches cleaned ✨'"
     remote-cleanup = "!git branch -r --merged | grep -Ev '(^\\*|master|main|dev)' | xargs -n 1 git push --delete origin && echo 'Merged Remote Branches cleaned ✨'"
@@ -12,21 +12,21 @@ Paste these:
 
 You will get
 
-```sh
+```bash
 git cleanup # deletes stale branches which has already been merged locally
 git remote-cleanup # deletes stales branches which has already been merge remotely
 ```
 
 Another way is doing
 
-```sh
+```bash
 git config --global alias.undo  "\!git reset --soft HEAD~1" 
 git config --global alias.redo  "\!git reset --hard HEAD@{1}"
 ```
 
 On top of the previous commands you will get
 
-```
+```bash
 git undo # undo last commit without being distructive
 git redo # replay the last command
 ```
