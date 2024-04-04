@@ -33,4 +33,4 @@ git redo # replay the last command
 
 Example of `undo` and `redo`
 - Lets say you committed something, you messed up. just do `git undo`, now you are let's say you've changed you mind, you want to go back to the original changes. Do `git redo`.
-- If you do `git redo`, without a git undo, it will be destructive! Modify it to check in history if you run a git command before. Maybe
+- If you do `git redo`, without a git undo, it will be destructive! Modify it to check in history if you run a git command before. Maybe check if a git command was previously executed for example.
